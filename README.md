@@ -42,4 +42,5 @@ https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct
 
 ## **画面遷移図**
 
-<img width="904" alt="スクリーンショット 2022-11-21 2 23 47" src="https://user-images.githubusercontent.com/112692112/202916576-a5c0403e-0e07-4c39-b6c1-5eea9288a568.png">
+<img width="873" alt="スクリーンショット 2022-11-21 3 42 42" src="https://user-images.githubusercontent.com/112692112/202920017-d771dcb5-a5d5-4254-a4e7-2d936c762ed6.png">
+
