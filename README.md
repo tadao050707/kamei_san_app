@@ -34,7 +34,7 @@ https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct
 
 ## **ワイヤーフレーム**
 
-<img width="510" alt="スクリーンショット 2022-11-21 2 22 48" src="https://user-images.githubusercontent.com/112692112/202916561-f22b4393-a1fc-4269-abcf-5ff36323a6fa.png">
+<img width="556" alt="スクリーンショット 2022-11-21 3 20 03" src="https://user-images.githubusercontent.com/112692112/202919045-9041e4c4-fc7c-4c90-9aa4-4d6b5da2014d.png">
 
 ## **ER 図**
 
