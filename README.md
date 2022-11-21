@@ -1,24 +1,46 @@
-# README
+# **README**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## **開発言語**
 
-Things you may want to cover:
+- Ruby 3.0.1
+- Rails 6.1.7
 
-* Ruby version
+## **就業 Term の技術**
 
-* System dependencies
+- devise
+- お気に入り機能
 
-* Configuration
+## **カリキュラム外の技術**
 
-* Database creation
+- gem/rails_admin
 
-* Database initialization
+## **実行手順**
 
-* How to run the test suite
+```
+$ git clone git@github.sayaka-kamei/POCCHI.git
+$ cd POCCHI
+$ bundle install
+$ rails db:create && rails db:migrate
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## **カタログ設計**
 
-* Deployment instructions
+https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct5qU/edit?hl=JA#gid=1486895704
 
-* ...
+## **テーブル定義書**
+
+https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct5qU/edit?hl=JA#gid=1486895704
+
+## **ワイヤーフレーム**
+
+<img width="556" alt="スクリーンショット 2022-11-21 3 20 03" src="https://user-images.githubusercontent.com/112692112/202919045-9041e4c4-fc7c-4c90-9aa4-4d6b5da2014d.png">
+
+## **ER 図**
+
+<img width="924" alt="スクリーンショット 2022-11-21 2 28 01" src="https://user-images.githubusercontent.com/112692112/202916700-557da0cd-9082-42b3-b0bd-7fb6592881b3.png">
+
+## **画面遷移図**
+
+<img width="873" alt="スクリーンショット 2022-11-21 3 42 42" src="https://user-images.githubusercontent.com/112692112/202920017-d771dcb5-a5d5-4254-a4e7-2d936c762ed6.png">
+
