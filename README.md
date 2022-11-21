@@ -13,6 +13,8 @@
 ## **カリキュラム外の技術**
 
 - gem/rails_admin
+- gem/cancancan
+- gem/devise_invitable
 
 ## **実行手順**
 
@@ -38,7 +40,7 @@ https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct
 
 ## **ER 図**
 
-<img width="924" alt="スクリーンショット 2022-11-21 2 28 01" src="https://user-images.githubusercontent.com/112692112/202916700-557da0cd-9082-42b3-b0bd-7fb6592881b3.png">
+<img width="926" alt="スクリーンショット 2022-11-22 0 33 16" src="https://user-images.githubusercontent.com/112692112/203096246-b961f671-7193-43d7-b635-e14549977081.png">
 
 ## **画面遷移図**
 
