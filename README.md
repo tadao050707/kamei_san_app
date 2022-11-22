@@ -15,6 +15,7 @@
 - gem/rails_admin
 - gem/cancancan
 - gem/devise_invitable
+- gem/ransak
 
 ## **実行手順**
 
@@ -36,7 +37,7 @@ https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct
 
 ## **ワイヤーフレーム**
 
-<img width="556" alt="スクリーンショット 2022-11-21 3 20 03" src="https://user-images.githubusercontent.com/112692112/202919045-9041e4c4-fc7c-4c90-9aa4-4d6b5da2014d.png">
+<img width="471" alt="スクリーンショット 2022-11-22 19 13 31" src="https://user-images.githubusercontent.com/112692112/203288034-1cc3886c-236b-43aa-b0be-cc15fe06907a.png">
 
 ## **ER 図**
 
