@@ -41,7 +41,7 @@ https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct
 
 ## **ER 図**
 
-<img width="923" alt="スクリーンショット 2022-11-22 13 57 26" src="https://user-images.githubusercontent.com/112692112/203225503-4ce9e41f-d339-4290-9f0e-57d6df5a6abd.png">
+<img width="722" alt="スクリーンショット 2022-11-22 20 40 34" src="https://user-images.githubusercontent.com/112692112/203305702-65187fd1-2247-4cac-b817-867fc38c2265.png">
 
 ## **画面遷移図**
 
