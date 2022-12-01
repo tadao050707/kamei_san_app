@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :group_id, :value => current_user.groups.first.id %>
+
   <div class="field">
     <h3><label for="group_id">グループ名</label></h3>
     <%= form.select :group_id, current_user.groups.pluck(:name, :id)%>
@@ -23,7 +25,7 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_area :image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">
