@@ -12,7 +12,8 @@
 
   <body>
     <% if user_signed_in? %>
-      <%= link_to "ユーザー", user_path(current_user)%> 
+      <%= link_to "ユーザー情報", user_path(current_user)%> 
+      <%= link_to "チーム作成", new_group_path%> 
       <%= link_to "クイズ一覧", quizzes_path(current_user)%> 
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
     <% else %>
