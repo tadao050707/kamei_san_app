@@ -1,0 +1,36 @@
+<%= form_with(model: answer) do |form| %>
+  <% if answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+        <% answer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h2>本日の質問</h2>
+  <%= @quiz.title %>
+  <%= image_tag @quiz.image.url %>
+
+  <%= form.hidden_field :quiz_id, :value => @quiz.id %>
+
+  <%= form.label :select_answer, 'A' %>
+  <%= form.radio_button :select_answer, 'A' %>
+
+  <%= form.label :select_answer, 'B' %>
+  <%= form.radio_button :select_answer, 'B' %>
+
+  <%= form.label :select_answer, 'C' %>
+  <%= form.radio_button :select_answer, 'C' %>
+
+  <%= form.label :select_answer, 'D' %>
+  <%= form.radio_button :select_answer, 'D' %>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

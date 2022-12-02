@@ -8,15 +8,5 @@
   <%= image_tag @quiz.image.url %>
 </p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @quiz.group.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @quiz.user.name %>
-</p>
-
 <%= link_to 'Edit', edit_quiz_path(@quiz) %> |
 <%= link_to 'Back', quizzes_path %>

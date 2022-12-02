@@ -3,27 +3,20 @@
 <table>
   <thead>
     <tr>
-      <th>グループ名</th>
-      <th>ユーザー名</th>
       <th>問題文</th>
-      <th>解答日</th>
+      <th>作成日</th>
       <th colspan="3"></th>
-    </tr>
     </tr>
   </thead>
 
   <tbody>
     <% @quizzes.each do |quiz| %>
       <tr>
-        <% if quiz.group.id == current_user.groups.first.id %>
-        <td><%= quiz.group.name %></td>
-        <td><%= quiz.user.name %></td>
         <td><%= quiz.title %></td>
         <td><%= quiz.created_at %></td>
         <td><%= link_to 'Show', quiz %></td>
         <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
         <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
       </tr>
     <% end %>
   </tbody>
