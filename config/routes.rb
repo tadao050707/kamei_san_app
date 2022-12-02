@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :answers
   resources :groups
   resources :quizzes
   root to: "quizzes#index"
@@ -6,4 +7,5 @@ Rails.application.routes.draw do
     invitations: 'users/invitations'
   }
   resources :users, only: :show
+  resources :answers
 end

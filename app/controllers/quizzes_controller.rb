@@ -17,8 +17,6 @@ class QuizzesController < ApplicationController
 
   def create
     @quiz = Quiz.new(quiz_params)
-    @quiz.user_id = current_user.id
-    @quiz.group_id = quiz_params[:group_id]
     if @quiz.save
       redirect_to @quiz, notice: "Quiz was successfully created." 
     else
