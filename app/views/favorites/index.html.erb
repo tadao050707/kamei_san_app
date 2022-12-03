@@ -1,0 +1,21 @@
+<h1>Favorite list</h1>
+
+<table>
+  <tr>
+    <th>ユーザー名</th>
+    <th>問題文</th>
+    <th></th>
+    <th>回答</th>
+  </tr>
+
+
+<% @favorites.each do |favorite| %>
+  <tr>
+    <td><%= favorite.answer.user.name %>さん</td> 
+    <td><%= image_tag favorite.answer.quiz.image.url if favorite.answer.quiz.image.url %></td>
+    <td><%= favorite.answer.quiz.title %></td>
+    <td><%= favorite.answer.select_answer %></td>
+  </tr>
+<% end %>
+</table>
+

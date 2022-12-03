@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_01_062646) do
+ActiveRecord::Schema.define(version: 2022_12_03_064254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2022_12_01_062646) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_assigns_on_group_id"
     t.index ["user_id"], name: "index_assigns_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "answer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["answer_id"], name: "index_favorites_on_answer_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -80,4 +89,6 @@ ActiveRecord::Schema.define(version: 2022_12_01_062646) do
   add_foreign_key "answers", "users"
   add_foreign_key "assigns", "groups"
   add_foreign_key "assigns", "users"
+  add_foreign_key "favorites", "answers"
+  add_foreign_key "favorites", "users"
 end
