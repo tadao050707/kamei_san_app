@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>グループ名</th>
       <th>クイズ内容</th>
       <th>回答者</th>
       <th>回答</th>
@@ -13,8 +14,9 @@
   <tbody>
     <% @answers.each do |answer| %>
       <tr>
+        <td><%= Group.find(answer.group_id).name %></td>
         <td><%= Quiz.find(answer.quiz_id).title %></td>
-        <td><%= User.find(answer.user_id).name %></td>
+        <td><%= User.find(answer.user_id).name %></td>さん
         <td><%= answer.select_answer %></td>
         <td><%= link_to 'Show', answer %></td>
         <td><%= link_to 'Edit', edit_answer_path(answer) %></td>

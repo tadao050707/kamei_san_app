@@ -1,3 +1,8 @@
+<p>
+  <strong>グループ名:</strong>
+  <td><%= Group.find(@answer.group_id).name %></td>
+</p>
+
 <h2>本日の質問</h2>
   <%= Quiz.find(@answer.quiz_id).title %>
   <%= image_tag Quiz.find(@answer.quiz_id).image.url %>

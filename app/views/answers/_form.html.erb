@@ -11,6 +11,9 @@
     </div>
   <% end %>
 
+  <h3><label for="group_id">グループ名</label></h3>
+  <%= form.select :group_id, current_user.groups.pluck(:name, :id)%>
+
   <h2>本日の質問</h2>
   <%= @quiz.title %>
   <%= image_tag @quiz.image.url %>
