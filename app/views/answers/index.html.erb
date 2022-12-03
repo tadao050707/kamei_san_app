@@ -3,6 +3,17 @@
 <table>
   <thead>
     <tr>
+      <%= search_form_for @q do |f| %>
+        <th><%= f.label :group_name, "グループ名" %></th>
+        <th><%= f.search_field :group_name_cont %></th>
+        <th><%= f.label :quiz_title, "クイズ内容" %></th>
+        <th><%= f.search_field :quiz_title_cont %></th>
+        <th><%= f.submit "検索" %></th>
+        <th><%= link_to "一覧を表示", answers_path %></th>
+      <% end %>
+    </tr>  
+  
+    <tr>
       <th>グループ名</th>
       <th>クイズ内容</th>
       <th>回答者</th>
@@ -16,7 +27,7 @@
       <tr>
         <td><%= Group.find(answer.group_id).name %></td>
         <td><%= Quiz.find(answer.quiz_id).title %></td>
-        <td><%= User.find(answer.user_id).name %></td>さん
+        <td><%= User.find(answer.user_id).name %>さん</td>
         <td><%= answer.select_answer %></td>
         <td><%= link_to 'Show', answer %></td>
         <td><%= link_to 'Edit', edit_answer_path(answer) %></td>

@@ -2,7 +2,8 @@ class AnswersController < ApplicationController
   before_action :set_answer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @answers = Answer.all
+    @q = Answer.ransack(params[:q])
+    @answers = @q.result(distinct: true)
   end
 
   def show
