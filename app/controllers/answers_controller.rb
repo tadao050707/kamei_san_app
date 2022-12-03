@@ -6,6 +6,7 @@ class AnswersController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(answer_id: @answer.id)
   end
 
   def new

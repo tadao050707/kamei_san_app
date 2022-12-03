@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :quizzes, dependent: :destroy
   attr_accessor :group_id
   has_many :answers, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 end
