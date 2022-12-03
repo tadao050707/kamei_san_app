@@ -18,6 +18,7 @@ class AnswersController < ApplicationController
 
   def create
     @answer = current_user.answers.build(answer_params)
+    @answer.group_id = answer_params[:group_id]
     @answer.save
     redirect_to answers_path
   end
@@ -41,6 +42,6 @@ class AnswersController < ApplicationController
     end
 
     def answer_params
-      params.require(:answer).permit(:select_answer, :quiz_id)
+      params.require(:answer).permit(:select_answer, :quiz_id, :user_id, :group_id)
     end
 end
