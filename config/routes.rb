@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   resources :quizzes
   root to: "top#show"
   devise_for :users, controllers: {
-    invitations: 'users/invitations'
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
   }
   resources :users, only: :show
   resources :answers
   resources :favorites, only: [:index, :create, :destroy]
-
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
+  end
 end

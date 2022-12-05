@@ -5,14 +5,14 @@
 
   <p>
     <strong>グループ名</strong>
-    <%= current_user.groups.first.name %>
+    <%= f.select :group_id, current_user.groups.pluck(:name, :id)%>
   </p>
   <% resource.class.invite_key_fields.each do |field| -%>
     <div class="field">
       <%= f.label field %><br />
       <%= f.text_field field %>
 
-      <%= f.hidden_field :group_id, :value => current_user.groups.first.id %>
+      <%= f.hidden_field :group_id, :value => current_user.groups.ids %>
     </div>
   <% end -%>
 
