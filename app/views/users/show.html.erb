@@ -21,7 +21,9 @@
 <% if current_user.groups.first.present? %>
 <p>
     <strong>グループ名</strong>
-    <%= current_user.groups.first.name %>
+    <% current_user.groups.each do |group| %>
+        <%= group.name %>
+    <% end %>
 </p>
 
 <% else %>
