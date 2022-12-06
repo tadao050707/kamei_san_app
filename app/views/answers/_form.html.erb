@@ -13,6 +13,7 @@
 
   <h3><label for="group_id">グループ名</label></h3>
   <%= form.select :group_id, current_user.groups.pluck(:name, :id)%>
+  <%= form.hidden_field :group_id, :value => current_user.groups.ids %>
 
   <h2>本日の質問</h2>
   <%= @quiz.title %>
