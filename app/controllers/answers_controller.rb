@@ -21,7 +21,9 @@ class AnswersController < ApplicationController
   def create
     @answer = current_user.answers.build(answer_params)
     @answer.group_id = answer_params[:group_id]
+    @answer.quiz_id = answer_params[:quiz_id]
     @answer.save
+    AnswerMailer.answer_mail(@answer).deliver
     redirect_to answers_path
   end
 
