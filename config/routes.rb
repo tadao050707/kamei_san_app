@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root to: "top#show"
   devise_for :users, controllers: {
     registrations: 'users/registrations',
-    passwords: 'users/passwords'
+    passwords: 'users/passwords',
+    invitations: 'users/invitations'
   }
   resources :users, only: :show
   resources :answers
