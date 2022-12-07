@@ -6,7 +6,7 @@
   <% resource.class.invite_key_fields.each do |field| -%>
     <strong>グループ名</strong>
     <%= f.select :group_id, current_user.groups.pluck(:name, :id)%>
-    <%= f.hidden_field :group_id, :value => current_user.groups.ids %>
+    
     <div class="field">
       <%= f.label field %><br />
       <%= f.text_field field %>
