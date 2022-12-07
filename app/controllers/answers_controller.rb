@@ -4,6 +4,7 @@ class AnswersController < ApplicationController
   def index
     @q = Answer.ransack(params[:q])
     @answers = @q.result(distinct: true)
+    @answers = @answers.where(group_id: current_user.groups.pluck(:id)).order(updated_at: :desc)
   end
 
   def show

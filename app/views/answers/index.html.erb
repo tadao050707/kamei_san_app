@@ -6,7 +6,7 @@
       <%= search_form_for @q do |f| %>
         <th><%= f.label :group_name, "グループ名" %></th>
         <th><%= f.search_field :group_name_cont %></th>
-        <th><%= f.label :quiz_title, "クイズ内容" %></th>
+        <th><%= f.label :quiz_title, "４択の内容" %></th>
         <th><%= f.search_field :quiz_title_cont %></th>
         <th><%= f.submit "検索" %></th>
         <th><%= link_to "一覧を表示", answers_path %></th>
@@ -15,9 +15,10 @@
   
     <tr>
       <th>グループ名</th>
-      <th>クイズ内容</th>
-      <th>回答者</th>
-      <th>回答</th>
+      <th>４択の内容</th>
+      <th>解答者</th>
+      <th>解答</th>
+      <th>解答した日時</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,6 +30,7 @@
         <td><%= Quiz.find(answer.quiz_id).title %></td>
         <td><%= User.find(answer.user_id).name %>さん</td>
         <td><%= answer.select_answer %></td>
+        <td><%= l answer.created_at, format: :short  %></td>
         <td><%= link_to 'Show', answer %></td>
         <td><%= link_to 'Edit', edit_answer_path(answer) %></td>
         <td><%= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -3,6 +3,7 @@
 <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field :invitation_token, readonly: true %>
+  <%# <%= f.hidden_field :group_id, :value => Group.find(group.id) %> 
 
   <% if f.object.class.require_password_on_accepting %>
 
@@ -13,7 +14,7 @@
 
     <div class="field">
       <%= f.label :gender, "性別" %><br />
-      <%= f.text_field :gender %>
+      <%= f.select :gender, [["男性","男性"],["女性","女性"],["フリー","フリー"]], include_blank: "選択して下さい" %>
     </div>
 
     <div class="field">
@@ -30,6 +31,7 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation %>
     </div>
+
   <% end %>
 
   <div class="actions">

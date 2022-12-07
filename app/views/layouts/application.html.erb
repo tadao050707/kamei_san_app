@@ -15,12 +15,12 @@
       <%= link_to "ユーザー情報", user_path(current_user) %>
       <%= link_to "チーム作成", new_group_path %> 
       <%= link_to "チーム招待", new_user_invitation_path(current_user) %> 
-      <%= link_to "クイズに回答する", new_answer_path %>
-      <%= link_to "回答一覧", answers_path %>
+      <%= link_to "本日の質問に解答する", new_answer_path %>
+      <%= link_to "みんなの解答一覧", answers_path %>
       <%= link_to "お気に入り一覧", favorites_path %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
       <% if current_user.admin? %>
-        <%= link_to "クイズ一覧", quizzes_path(current_user)%>
+        <%= link_to "質問一覧", quizzes_path(current_user)%>
         <%= link_to "管理者画面", rails_admin_path %>
       <% end %>
     <% else %>
