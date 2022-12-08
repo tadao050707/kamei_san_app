@@ -8,5 +8,5 @@ class DailyMailer < ApplicationMailer
   def daily_notification
     default to: -> { User.pluck(:email) }
     mail(subject: "本日のPOCCHIご案内")
-end
+  end
 end
