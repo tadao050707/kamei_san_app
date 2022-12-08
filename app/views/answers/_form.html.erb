@@ -11,8 +11,10 @@
     </div>
   <% end %>
 
+<table>
   <h3><label for="group_id">グループ名</label></h3>
   <h1><%= form.select :group_id, current_user.groups.pluck(:name, :id)%></h1>
+  <%= form.hidden_field :group_id, :value => current_user.groups.ids %>
 
   <h2>本日の質問</h2>
   <h1><%= @quiz.title %></h1>
@@ -20,20 +22,21 @@
 
   <%= form.hidden_field :quiz_id, :value => @quiz.id %>
   <tr>
-    <td><%= form.label :select_answer, 'A' %></td>
-    <td><%= form.radio_button :select_answer, 'A' %></td>
+    <th><%= form.label :select_answer, 'A' %></th>
+    <th><%= form.radio_button :select_answer, 'A' %></th>
 
-    <td><%= form.label :select_answer, 'B' %></td>
-    <td><%= form.radio_button :select_answer, 'B' %></td>
+    <th><%= form.label :select_answer, 'B' %></th>
+    <th><%= form.radio_button :select_answer, 'B' %></th>
 
-    <td><%= form.label :select_answer, 'C' %></td>
-    <td><%= form.radio_button :select_answer, 'C' %></td>
+    <th><%= form.label :select_answer, 'C' %></th>
+    <th><%= form.radio_button :select_answer, 'C' %></th>
 
-    <td><%= form.label :select_answer, 'D' %></td>
-    <td><%= form.radio_button :select_answer, 'D' %></td>
+    <th><%= form.label :select_answer, 'D' %></th>
+    <th><%= form.radio_button :select_answer, 'D' %></th>
   </tr>
 
   <div class="actions">
     <%= form.submit "解答する"%>
   </div>
-<% end %>
+  <% end %>
+</table>  
