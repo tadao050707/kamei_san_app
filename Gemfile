@@ -39,3 +39,4 @@ gem 'carrierwave'
 gem 'ransack'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
+gem 'whenever', require: false
