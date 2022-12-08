@@ -10,12 +10,14 @@
 env :PATH, ENV['PATH']
 set :output, "log/cron.log" 
 set :environment, :production
+
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
 #   runner "MyModel.some_method"
 #   rake "some:great:rake:task"
 # end
 #
+
 every 1.days, at: '11:30 am' do
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
