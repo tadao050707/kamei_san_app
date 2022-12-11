@@ -12,8 +12,9 @@ class AnswersController < ApplicationController
   end
 
   def new
+    @today_quiz = Quiz.find_by(request_answer_on: Date.current) 
     @answer = Answer.new
-    @quiz = Quiz.offset( rand(Quiz.count) ).first
+    # @quiz = Quiz.offset( rand(Quiz.count) ).first
   end
 
   def edit

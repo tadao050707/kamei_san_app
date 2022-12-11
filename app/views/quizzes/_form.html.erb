@@ -21,6 +21,11 @@
     <%= form.file_field :image %>
   </div>
 
+  <div class="field">
+    <%= form.label :回答予定日 %>
+    <%= form.date_field :request_answer_on %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

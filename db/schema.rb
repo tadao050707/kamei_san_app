@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2022_12_03_154055) do
   create_table "quizzes", force: :cascade do |t|
     t.string "title"
     t.text "image"
+    t.date "request_answer_on"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

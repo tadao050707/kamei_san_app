@@ -44,6 +44,6 @@ class QuizzesController < ApplicationController
   end
 
   def quiz_params
-    params.require(:quiz).permit(:title, :image, :group_id, :user_id)
+    params.require(:quiz).permit(:title, :image, :request_answer_on, :group_id, :user_id)
   end
 end
