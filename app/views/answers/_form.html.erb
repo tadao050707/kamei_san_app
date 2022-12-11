@@ -17,10 +17,10 @@
   <%= form.hidden_field :group_id, :value => current_user.groups.ids %>
 
   <h2>本日の質問</h2>
-  <h1><%= @quiz.title %></h1>
-  <%= image_tag @quiz.image.url %>
+  <h1><%= @today_quiz.title %></h1>
+  <%= image_tag @today_quiz.image.url %>
 
-  <%= form.hidden_field :quiz_id, :value => @quiz.id %>
+  <%= form.hidden_field :quiz_id, :value => @today_quiz.id %>
   <tr>
     <th><%= form.label :select_answer, 'A' %></th>
     <th><%= form.radio_button :select_answer, 'A' %></th>
