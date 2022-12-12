@@ -12,9 +12,9 @@ gem 'turbolinks', '~> 5'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'unicorn'
+
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-rails'
   gem 'capistrano', '3.16.0' 
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
@@ -22,6 +22,9 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  
 end
 
 group :development do
@@ -50,4 +53,3 @@ gem 'whenever', require: false
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'dotenv-rails' 
-gem 'unicorn'
