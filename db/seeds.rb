@@ -16,7 +16,7 @@
 
 @user2 = User.create!(
   name: 'user2',
-  gender: '女性',
+  gender: '男性',
   age: '20',
   email: 'user2@com',
   password: 'password',
@@ -25,7 +25,7 @@
 
 @user3 = User.create!(
   name: 'user3',
-  gender: '男性',
+  gender: '女性',
   age: '60',
   email: 'user3@com',
   password: 'password',
@@ -50,6 +50,79 @@
   admin: false
 )
 
+@group1 = Group.create!(
+  name: 'dive'
+)
+
+@group2 = Group.create!(
+  name: 'code'
+)
+
+Assign.create!(
+  user_id: @user1.id,
+  group_id: @group1.id
+)
+
+Assign.create!(
+  user_id: @user2.id,
+  group_id: @group1.id
+)
+
+Assign.create!(
+  user_id: @user3.id,
+  group_id: @group2.id
+)
+
+Assign.create!(
+  user_id: @user4.id,
+  group_id: @group2.id
+)
+
+Assign.create!(
+  user_id: @user5.id,
+  group_id: @group1.id
+)
+
+@quiz = Quiz.create!(
+  title: "元気ですか〜？",
+  image: File.open("./app/assets/images/quiz.png"),
+  request_answer_on: Date.current
+)
+
+Answer.create!(
+  user_id: @user1.id,
+  select_answer: "A",
+  group_id: @group1.id,
+  quiz_id: @quiz.id,
+)  
+
+Answer.create!(
+  user_id: @user2.id,
+  select_answer: "B",
+  group_id: @group1.id,
+  quiz_id: @quiz.id,
+)  
+
+Answer.create!(
+  user_id: @user3.id,
+  select_answer: "A",
+  group_id: @group2.id,
+  quiz_id: @quiz.id,
+)  
+
+Answer.create!(
+  user_id: @user4.id,
+  select_answer: "B",
+  group_id: @group2.id,
+  quiz_id: @quiz.id,
+)  
+
+Answer.create!(
+  user_id: @user5.id,
+  select_answer: "C",
+  group_id: @group1.id,
+  quiz_id: @quiz.id,
+)  
 
 
 # User.create!(name: 'admin',
