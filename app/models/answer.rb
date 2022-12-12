@@ -1,4 +1,5 @@
 class Answer < ApplicationRecord
+  validates :select_answer, presence: true
   belongs_to :quiz
   belongs_to :user
   belongs_to :group

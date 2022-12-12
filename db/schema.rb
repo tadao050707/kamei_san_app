@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_12_03_154055) do
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
-    t.string "select_answer"
+    t.string "select_answer", null: false
     t.bigint "quiz_id", null: false
     t.bigint "user_id", null: false
     t.bigint "group_id", null: false
@@ -46,15 +46,15 @@ ActiveRecord::Schema.define(version: 2022_12_03_154055) do
   end
 
   create_table "groups", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "quizzes", force: :cascade do |t|
-    t.string "title"
-    t.text "image"
-    t.date "request_answer_on"
+    t.string "title", null: false
+    t.text "image", null: false
+    t.date "request_answer_on", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

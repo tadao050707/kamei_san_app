@@ -13,8 +13,8 @@
   <body>
     <% if user_signed_in? %>
       <%= link_to "ユーザー情報", user_path(current_user) %>
-      <%= link_to "チーム作成", new_group_path %> 
-      <%= link_to "チーム招待", new_user_invitation_path(current_user) %> 
+      <%= link_to "グループ作成", new_group_path %> 
+      <%= link_to "グループ招待", new_user_invitation_path(current_user) %> 
       <%= link_to "本日の質問に解答する", new_answer_path %>
       <%= link_to "みんなの解答一覧", answers_path %>
       <%= link_to "お気に入り一覧", favorites_path %>
