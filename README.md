@@ -8,14 +8,15 @@
 ## **就業 Term の技術**
 
 - devise
+- AWS EC2
 - お気に入り機能
 
 ## **カリキュラム外の技術**
 
 - gem/rails_admin
-- gem/cancancan
 - gem/devise_invitable
 - gem/ransak
+- gem/whenever
 
 ## **実行手順**
 
@@ -24,6 +25,7 @@ $ git clone git@github.sayaka-kamei/POCCHI.git
 $ cd POCCHI
 $ bundle install
 $ rails db:create && rails db:migrate
+$ rails db:seed
 $ rails s
 ```
 
