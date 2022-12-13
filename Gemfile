@@ -44,7 +44,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'rexml'
 gem 'devise_invitable'
-gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'ransack'
 gem 'rails_admin', '~> 2.0'
