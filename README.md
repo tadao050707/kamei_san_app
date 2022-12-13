@@ -39,11 +39,12 @@ https://docs.google.com/spreadsheets/d/1eU6IvNVgRl3oGpX_rPBzn3jyPx5MRm0hkw-Tzzct
 
 ## **ワイヤーフレーム**
 
-<img width="471" alt="スクリーンショット 2022-11-22 19 13 31" src="https://user-images.githubusercontent.com/112692112/203288034-1cc3886c-236b-43aa-b0be-cc15fe06907a.png">
+<img width="445" alt="スクリーンショット 2022-12-13 18 03 06" src="https://user-images.githubusercontent.com/112692112/207294426-3ba24f44-463e-40be-b22a-a09a6a0f9e01.png">
+
 
 ## **ER 図**
 
-<img width="750" alt="スクリーンショット 2022-11-24 15 28 04" src="https://user-images.githubusercontent.com/112692112/203710072-1d39a7fb-3404-43ba-901e-959ae8e73693.png">
+<img width="946" alt="スクリーンショット 2022-12-13 18 19 57" src="https://user-images.githubusercontent.com/112692112/207294592-55e445f1-7bd5-4b50-a31b-4498a630b741.png">
 
 ## **画面遷移図**
 
