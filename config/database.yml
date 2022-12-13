@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: POCCHI_production
-  username: POCCHI
+  database: pocchi_production
+  username: pocchi
   password: <%= ENV['POCCHI_DATABASE_PASSWORD'] %>

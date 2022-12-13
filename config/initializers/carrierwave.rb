@@ -18,13 +18,13 @@ CarrierWave.configure do |config|
 
   case Rails.env
     when 'production'
-      config.fog_directory = 'pocchi'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi'
+      config.fog_directory = 'pocchi-production'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-production'
     when 'development'
-      config.fog_directory = 'pocchi'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi'
+      config.fog_directory = 'pocchi-development'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-development'
     when 'test'
-      config.fog_directory = 'pocchi'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi'
-  end
+      config.fog_directory = 'pocchi-test'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-test' 
+    end
 end
