@@ -10,7 +10,7 @@ CarrierWave.configure do |config|
       aws_access_key_id:     ENV["AWS_ACCESS_KEY_ID"],
       aws_secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"],
       region:                'ap-northeast-1',
-      path_style:            true
+      path_style:            true,
   }
 
   config.fog_public     = false
@@ -18,13 +18,10 @@ CarrierWave.configure do |config|
 
   case Rails.env
     when 'production'
-      config.fog_directory = 'pocchi-production'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-production'
+      config.fog_directory = 'p-production'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/p-production'
     when 'development'
-      config.fog_directory = 'pocchi-development'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-development'
-    when 'test'
-      config.fog_directory = 'pocchi-test'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-test' 
+      config.fog_directory = 'p-development'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/p-development'
   end
 end
