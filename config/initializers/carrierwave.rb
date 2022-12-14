@@ -26,5 +26,5 @@ CarrierWave.configure do |config|
     when 'test'
       config.fog_directory = 'pocchi-test'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/pocchi-test' 
-    end
+  end
 end
