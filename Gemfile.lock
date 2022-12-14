@@ -355,7 +355,6 @@ DEPENDENCIES
   byebug
   cancancan
   capistrano (= 3.16.0)
-  capistrano-bundler
   capistrano-rails
   capistrano-rbenv
   capistrano3-unicorn

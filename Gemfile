@@ -12,19 +12,32 @@ gem 'turbolinks', '~> 5'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise'
+gem 'rexml'
+gem 'devise_invitable'
+
+gem 'ransack'
+gem 'rails_admin', '~> 2.0'
+gem 'cancancan'
+gem 'whenever', require: false
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog-aws'
+
+gem 'dotenv-rails'
 gem 'unicorn'
 
 group :development, :test do
   gem 'capistrano', '3.16.0' 
-  gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'pry-rails'
-  
+  gem 'pry-rails'  
 end
 
 group :development do
@@ -40,17 +53,3 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise'
-gem 'rexml'
-gem 'devise_invitable'
-
-gem 'ransack'
-gem 'rails_admin', '~> 2.0'
-gem 'cancancan'
-gem 'whenever', require: false
-
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'fog-aws'
-gem 'dotenv-rails'
