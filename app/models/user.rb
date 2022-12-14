@@ -16,7 +16,7 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.name = "guest"
       user.gender = "フリー"
-      user.age = "40"
+      user.age = "1982"
     end
   end 
   def self.admin_guest
@@ -24,7 +24,7 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.name = "admin_guest"
       user.gender = "フリー"
-      user.age = "40"
+      user.age = "1992"
       user.admin = true
     end
   end 

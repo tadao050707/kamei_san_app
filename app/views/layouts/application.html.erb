@@ -15,9 +15,9 @@
       <%= link_to "ユーザー情報", user_path(current_user) %>
       <%= link_to "グループ作成", new_group_path %> 
       <%= link_to "グループ招待", new_user_invitation_path(current_user) %> 
-      <%= link_to "本日の質問に解答する", new_answer_path %>
-      <%= link_to "みんなの解答一覧", answers_path %>
-      <%= link_to "お気に入り一覧", favorites_path %>
+      <%= link_to "今日のPOCCHI", new_answer_path %>
+      <%= link_to "みんなのPOCCHI", answers_path %>
+      <%= link_to "お気に入り", favorites_path %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
       <% if current_user.admin? %>
         <%= link_to "質問一覧", quizzes_path(current_user)%>
@@ -25,7 +25,7 @@
       <% end %>
     <% else %>
       <%= link_to 'ログイン', new_user_session_path %>
-      <%= link_to 'サインアップ', new_user_registration_path %>
+      <%= link_to '新規登録', new_user_registration_path %>
     <% end %>
     <p class="notice"><%= notice %></p>
     <%= yield %>

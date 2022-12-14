@@ -1,5 +1,4 @@
 <p>
-  <strong>Title:</strong>
   <h1><%= @quiz.title %></h1>
 </p>
 
@@ -7,5 +6,5 @@
   <%= image_tag @quiz.image.url %>
 </p>
 
-<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
-<%= link_to 'Back', quizzes_path %>
+<%= link_to '編集', edit_quiz_path(@quiz) %> |
+<%= link_to '一覧へ戻る', quizzes_path %>

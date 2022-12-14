@@ -8,7 +8,7 @@
 @user1 = User.create!(
   name: "admin",
   gender: "女性",
-  age: "42",
+  age: "1980",
   email: "admin1@example.com",
   password: "password",
   admin: true
@@ -17,7 +17,7 @@
 @user2 = User.create!(
   name: 'user2',
   gender: '男性',
-  age: '20',
+  age: '2002',
   email: 'user2@com',
   password: 'password',
   admin: false
@@ -26,7 +26,7 @@
 @user3 = User.create!(
   name: 'user3',
   gender: '女性',
-  age: '60',
+  age: '1962',
   email: 'user3@com',
   password: 'password',
   admin: false
@@ -35,7 +35,7 @@
 @user4 = User.create!(
   name: 'user4',
   gender: '男性',
-  age: '30',
+  age: '1992',
   email: 'user4@com',
   password: 'password',
   admin: false
@@ -44,7 +44,7 @@
 @user5 = User.create!(
   name: 'user5',
   gender: '女性',
-  age: '70',
+  age: '1952',
   email: 'user5@com',
   password: 'password',
   admin: false
