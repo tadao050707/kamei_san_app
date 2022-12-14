@@ -44,11 +44,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'rexml'
 gem 'devise_invitable'
-gem 'carrierwave'
+
 gem 'ransack'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
 gem 'whenever', require: false
+
+gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
-gem 'dotenv-rails' 
+gem 'dotenv-rails'
