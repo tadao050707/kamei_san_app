@@ -1,4 +1,4 @@
-<h1>Quizzes</h1>
+<h1>４択問題一覧</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
         <td><%= quiz.title %></td>
         <td><%= quiz.created_at %></td>
         <td><%= quiz.request_answer_on %></td>
-        <td><%= link_to 'Show', quiz %></td>
-        <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
-        <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', quiz %></td>
+        <td><%= link_to '編集', edit_quiz_path(quiz) %></td>
+        <td><%= link_to '削除', quiz, method: :delete, data: { confirm: '削除して良いですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Quiz', new_quiz_path %>
+<%= link_to '４択問題を新規作成する', new_quiz_path %>

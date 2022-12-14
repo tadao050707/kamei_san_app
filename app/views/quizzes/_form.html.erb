@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <h2><%= form.label :title %></h2>
-    <h2><%= form.text_field :title %></h2>
+    <h2><%= form.label :質問文 %></h2>
+    <h2><%= form.text_field :title, placeholder: "今日の気分は？" %></h2>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.label :質問内容 %>
+    <%= form.file_field :image , placeholder: "質問内容" %>
   </div>
 
   <div class="field">

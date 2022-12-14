@@ -1,13 +1,11 @@
-<h1>Answers</h1>
+<h1>みんなのPOCCHI</h1>
 
 <table>
   <thead>
     <tr>
       <%= search_form_for @q do |f| %>
-        <th><%= f.label :group_name, "グループ名" %></th>
-        <th><%= f.search_field :group_name_cont %></th>
-        <th><%= f.label :quiz_title, "４択の内容" %></th>
-        <th><%= f.search_field :quiz_title_cont %></th>
+        <th><%= f.search_field :group_name_cont, placeholder: "検索　グループ名" %></th>
+        <th><%= f.search_field :quiz_title_cont, placeholder: "検索　元気" %></th>
         <th><%= f.submit "検索" %></th>
         <th><%= link_to "一覧を表示", answers_path %></th>
       <% end %>
@@ -15,7 +13,7 @@
   
     <tr>
       <th>グループ名</th>
-      <th>４択の内容</th>
+      <th>POCCHI質問</th>
       <th>解答者</th>
       <th>解答</th>
       <th>解答した日時</th>
@@ -31,9 +29,9 @@
         <td><%= User.find(answer.user_id).name %>さん</td>
         <td><%= answer.select_answer %></td>
         <td><%= l answer.created_at, format: :short  %></td>
-        <td><%= link_to 'Show', answer %></td>
-        <td><%= link_to 'Edit', edit_answer_path(answer) %></td>
-        <td><%= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', answer %></td>
+        <td><%= link_to '編集', edit_answer_path(answer) %></td>
+        <td><%= link_to '削除', answer, method: :delete, data: { confirm: '削除して良いですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -41,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Answer', new_answer_path %>
+<%= link_to '今日のPOCCHI', new_answer_path %>
