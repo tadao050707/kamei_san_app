@@ -4,8 +4,8 @@
   <thead>
     <tr>
       <%= search_form_for @q do |f| %>
-        <th><%= f.search_field :group_name_cont, placeholder: "検索　グループ名" %></th>
-        <th><%= f.search_field :quiz_title_cont, placeholder: "検索　元気" %></th>
+        <th><%= f.search_field :group_name_cont, placeholder: '検索　グループ名' %></th>
+        <th><%= f.search_field :quiz_title_cont, placeholder: '検索　元気' %></th>
         <th><%= f.submit "検索" %></th>
         <th><%= link_to "一覧を表示", answers_path %></th>
       <% end %>
