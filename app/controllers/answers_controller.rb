@@ -21,6 +21,7 @@ class AnswersController < ApplicationController
   end
 
   def create
+    @today_quiz = Quiz.find_by(request_answer_on: Date.current) 
     @answer = current_user.answers.build(answer_params)
     @answer.group_id = answer_params[:group_id]
     @answer.quiz_id = answer_params[:quiz_id]
