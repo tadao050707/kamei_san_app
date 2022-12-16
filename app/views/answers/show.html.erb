@@ -1,19 +1,17 @@
+<div class="contents-title text-center" style="padding-top: 3rem">
 <p>
-  <strong>グループ名:</strong>
-  <td><%= Group.find(@answer.group_id).name %></td>
+  <h5>グループ名:<%= Group.find(@answer.group_id).name %></h5>
 </p>
 
-  <h1><%= Quiz.find(@answer.quiz_id).title %></h1>
-  <%= image_tag Quiz.find(@answer.quiz_id).image.url %>
+  <h4><%= Quiz.find(@answer.quiz_id).title %></h4>
+  <%= image_tag Quiz.find(@answer.quiz_id).image.url, :size =>'700x500' %>
 
 <p>
-  <strong>解答者</strong>
-  <%= User.find(@answer.user_id).name %>さん
+  <h5>解答者<%= User.find(@answer.user_id).name %>さん</h5>
 </p>
 
 <p>
-  <strong>解答</strong>
-  <%= @answer.select_answer %>
+  <h4>解答<%= @answer.select_answer %></h4>
 </p>
 
 <% if @favorite.present? %>
@@ -24,3 +22,4 @@
 
 <%= link_to '編集', edit_answer_path(@answer) %> |
 <%= link_to '一覧へもどる', answers_path %>
+</div>

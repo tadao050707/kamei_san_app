@@ -1,3 +1,4 @@
+<div class="contents-title text-center" style="padding-top: 1rem">
 <%= form_with(model: quiz) do |form| %>
   <% if quiz.errors.any? %>
     <div id="error_explanation">
@@ -10,23 +11,24 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <h2><%= form.label :質問文 %></h2>
-    <h2><%= form.text_field :title, placeholder: "今日の気分は？" %></h2>
+    <h5><%= form.label :質問文 %></h5>
+    <h5><%= form.text_field :title, placeholder: "今日の気分は？" %></h5>
   </div>
 
-  <div class="field">
-    <%= form.label :質問内容 %>
-    <%= form.file_field :image , placeholder: "質問内容" %>
+  <div class="field" style="padding-top: 1rem">
+    <h5><%= form.label :質問内容%></h5>
+    <h5><%= form.file_field :image , placeholder: "質問内容" %></h5>
   </div>
 
-  <div class="field">
-    <%= form.label :回答予定日 %>
-    <%= form.date_field :request_answer_on %>
+  <div class="field" style="padding-top: 1rem">
+    <h5><%= form.label :回答予定日 %></h5>
+    <h5><%= form.date_field :request_answer_on %></h5>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" style="padding-top: 1rem">
+    <h5><%= form.submit %></h5>
   </div>
 <% end %>
+</div>

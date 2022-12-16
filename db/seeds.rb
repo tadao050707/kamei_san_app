@@ -15,11 +15,11 @@
 )
 
 @user2 = User.create!(
-  name: 'user2',
-  gender: '男性',
-  age: '2002',
-  email: 'user2@com',
-  password: 'password',
+  name: "user2",
+  gender: "男性",
+  age: "2002",
+  email: "user2@example.com",
+  password: "password",
   admin: false
 )
 
@@ -27,7 +27,7 @@
   name: 'user3',
   gender: '女性',
   age: '1962',
-  email: 'user3@com',
+  email: 'user3@example.com',
   password: 'password',
   admin: false
 )
@@ -36,7 +36,7 @@
   name: 'user4',
   gender: '男性',
   age: '1992',
-  email: 'user4@com',
+  email: 'user4@example.com',
   password: 'password',
   admin: false
 )
@@ -45,7 +45,7 @@
   name: 'user5',
   gender: '女性',
   age: '1952',
-  email: 'user5@com',
+  email: 'user5@example.com',
   password: 'password',
   admin: false
 )

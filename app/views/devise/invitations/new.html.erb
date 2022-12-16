@@ -1,15 +1,18 @@
+<div class="contents-title text-center" style="padding-top: 3rem">
 <h2><%= t "devise.invitations.new.header" %></h2>
 
 <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <% resource.class.invite_key_fields.each do |field| -%>
-    <strong>グループ名</strong>
-      <%= f.select :group_id, current_user.groups.pluck(:name, :id)%>
-    
-    <div class="field">
-      <%= f.label field %><br />
-      <%= f.text_field field %>
+    <div class="field" style="padding-top: 2rem">
+      <h5><strong>グループ名</strong></h5>
+      <h6><strong>選択してください</strong></h6>
+        <h5><%= f.select :group_id, current_user.groups.pluck(:name, :id)%><h5>
+      </div>
+    <div class="field" style="padding-top: 2rem">
+      <h5><%= f.label field %></h5>
+      <%= f.text_field field, placeholder: "exam@com" %>
       
     </div>
   <% end %>
@@ -17,4 +20,5 @@
   <div class="actions">
     <%= f.submit t("devise.invitations.new.submit_button") %>
   </div>
+</div>  
 <% end %>

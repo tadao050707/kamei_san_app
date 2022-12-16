@@ -24,14 +24,17 @@ class AnswersController < ApplicationController
     @answer = current_user.answers.build(answer_params)
     @answer.group_id = answer_params[:group_id]
     @answer.quiz_id = answer_params[:quiz_id]
-    @answer.save
-    AnswerMailer.answer_mail(@answer).deliver
-    redirect_to answers_path
+    if @answer.save
+      AnswerMailer.answer_mail(@answer).deliver
+      redirect_to @answer, notice: '解答をグループの皆さんへメールしました'
+    else
+      render 'new'
+    end    
   end
 
   def update
     if @answer.update(answer_params)
-      redirect_to @answer, notice: 'Answer was successfully updated.'
+      redirect_to @answer, notice: '解答をグループの皆さんへメールしました。'
     else
       render :edit
     end
@@ -39,7 +42,7 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer.destroy
-    redirect_to answers_url, notice: 'Answer was successfully destroyed.'
+    redirect_to answers_url, notice: '解答を削除しました。'
   end
 
   private
