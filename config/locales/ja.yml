@@ -30,6 +30,11 @@ ja:
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
+    models:
+      group: グループ
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"    
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

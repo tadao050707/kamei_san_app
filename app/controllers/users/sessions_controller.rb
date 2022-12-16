@@ -10,5 +10,6 @@ class Users::SessionsController < Devise::SessionsController
     sign_in user
     redirect_to new_group_path, notice: '管理者ゲストユーザーとしてログインしました。'
   end
+
 end
 
