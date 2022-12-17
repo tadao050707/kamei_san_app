@@ -1,4 +1,5 @@
 class QuizzesController < ApplicationController
+  before_action :require_admin
   before_action :set_quiz, only: %i[ show edit update destroy ]
 
   def index
@@ -45,5 +46,9 @@ class QuizzesController < ApplicationController
 
   def quiz_params
     params.require(:quiz).permit(:title, :image, :image_cache, :request_answer_on, :group_id, :user_id)
+  end
+
+  def require_admin
+    redirect_to root_path unless current_user.admin?
   end
 end
