@@ -2,7 +2,6 @@
 <%= form_with(model: answer) do |form| %>
   <% if answer.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
 
       <ul>
         <% answer.errors.each do |error| %>
@@ -23,21 +22,21 @@
 
   <%= form.hidden_field :quiz_id, :value => @today_quiz.id %>
   <tr>
-    <th><%= form.label :select_answer, 'A' %></th>
-    <th><%= form.radio_button :select_answer, 'A' %></th>
+    <th><h3><%= form.label :select_answer, 'A' %></h3></th>
+    <th><h3><%= form.radio_button :select_answer, 'A' %></h3></th>
 
-    <th><%= form.label :select_answer, 'B' %></th>
-    <th><%= form.radio_button :select_answer, 'B' %></th>
+    <th><h3><%= form.label :select_answer, 'B' %></h3></th>
+    <th><h3><%= form.radio_button :select_answer, 'B' %></h3></th>
 
-    <th><%= form.label :select_answer, 'C' %></th>
-    <th><%= form.radio_button :select_answer, 'C' %></th>
+    <th><h3><%= form.label :select_answer, 'C' %></h3></th>
+    <th><h3><%= form.radio_button :select_answer, 'C' %></h3></th>
 
-    <th><%= form.label :select_answer, 'D' %></th>
-    <th><%= form.radio_button :select_answer, 'D' %></th>
+    <th><h3><%= form.label :select_answer, 'D' %></h3></th>
+    <th><h3><%= form.radio_button :select_answer, 'D' %></h3></th>
   
   
   <div class="actions" style="padding-:bottom 3rem">
-    <td><%= form.submit "解答する"%></td>
+    <td><h4><%= form.submit "解答する"%></h4></td>
   </div>
   </tr>
   <% end %>

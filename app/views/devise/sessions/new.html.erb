@@ -1,7 +1,8 @@
-<div class="contents-title text-center" style="padding-top: 3rem">
+<div class="contents-title text-center" style="padding-top: 2rem">
 <h3>ログイン</h3>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field" style="padding-top: 1rem">
     <h5><%= f.label :email %><br /></h5>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "exam@com"%>

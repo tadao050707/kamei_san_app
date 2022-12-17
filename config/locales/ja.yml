@@ -329,4 +329,6 @@ ja:
     pm: 午後
     formats:
       default: "%Y/%m/%d %H:%M:%S" 
-      short: "%m/%d %H:%M"     
+      short: "%m/%d %H:%M" 
+  view:
+    Select answer: "解答"          

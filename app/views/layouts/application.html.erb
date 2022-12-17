@@ -10,42 +10,42 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  <nav class="navbar navbar-light bg-warning fixed-top p-1" >
-  <div class="container">
-    <a class="navbar-brand" href="#">
-    <%= image_tag "pocchi3.png", :size =>'50x40' %>
-    <strong>POCCHI</strong>
-    <% if user_signed_in? %>
-      <%= link_to "ユーザー情報", user_path(current_user) %>
-      <%= link_to "グループ作成", new_group_path %> 
-      <%= link_to "グループ招待", new_user_invitation_path(current_user) %> 
-      <%= link_to "今日のPOCCHI", new_answer_path %>
-      <%= link_to "みんなのPOCCHI", answers_path %>
-      <%= link_to "お気に入り", favorites_path %>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-      <% if current_user.admin? %>
-        <%= link_to "質問一覧", quizzes_path(current_user)%>
-        <%= link_to "管理者画面", rails_admin_path %>
-      <% end %>
-    <% else %>
-      <%= link_to "トップページ", root_path %>
-      <%= link_to 'ログイン', new_user_session_path %>
-      <%= link_to '新規登録', new_user_registration_path %>
-    <% end %>
-    </a>
-  </div>
-</nav>
-
-
-
+  <body style="padding-bottom: 30px;">
+    <nav class="navbar navbar-light bg-warning fixed-top p-1" >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        <%= image_tag "pocchi3.png", :size =>'50x40' %>
+        <strong>POCCHI</strong>
+        <% if user_signed_in? %>
+          <%= link_to "ユーザー情報", user_path(current_user) %>
+          <%= link_to "グループ作成", new_group_path %> 
+          <%= link_to "グループ招待", new_user_invitation_path(current_user) %> 
+          <%= link_to "今日のPOCCHI", new_answer_path %>
+          <%= link_to "みんなのPOCCHI", answers_path %>
+          <%= link_to "お気に入り", favorites_path %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+          <% if current_user.admin? %>
+            <%= link_to "質問一覧", quizzes_path(current_user)%>
+            <%= link_to "管理者画面", rails_admin_path %>
+          <% end %>
+        <% else %>
+          <%= link_to "トップページ", root_path %>
+          <%= link_to 'ログイン', new_user_session_path %>
+          <%= link_to '新規登録', new_user_registration_path %>
+        <% end %>
+        </a>
+      </div>
+    </nav>
+    <p class="notice text-center" style="padding-top: 2rem"><%= notice %></p>
+    <p class="notice text-center" style="padding-top: 2rem"><%= alert %></p>
     <%= yield %>
+    <footer class="text-center bg-warning text-white fixed-bottom p-1">
+        <p>Portfolio</p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-     <p class="notice text-center" style="padding-top: 2rem"><%= notice %></p>
+
   </body>
 </html>
-<footer class="text-center bg-warning text-white fixed-bottom p-1">
-        <p>Portfolio</p>
-</footer>
