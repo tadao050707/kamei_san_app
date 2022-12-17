@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="padding-bottom: 30px;">
+  <body style="padding-bottom: 30px; padding-top: 45px;">
     <nav class="navbar navbar-light bg-warning fixed-top p-1" >
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -36,8 +36,8 @@
         </a>
       </div>
     </nav>
-    <p class="notice text-center" style="padding-top: 2rem"><%= notice %></p>
-    <p class="notice text-center" style="padding-top: 2rem"><%= alert %></p>
+    <p class="notice text-center"><%= notice %></p>
+    <p class="notice text-center"><%= alert %></p>
     <%= yield %>
     <footer class="text-center bg-warning text-white fixed-bottom p-1">
         <p>Portfolio</p>

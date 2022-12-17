@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.describe Quiz, type: :model do
   describe 'バリデーションのテスト' do
     context '画像の入力欄が空の場合' do
@@ -8,10 +7,9 @@ RSpec.describe Quiz, type: :model do
         expect(quiz).not_to be_valid
       end
     end
-    
     context '全項目が入力されている場合' do
       it '登録が完了する' do
-        quiz = FactoryBot.create(:quiz)
+        quiz = FactoryBot.build(:quiz)
         expect(quiz).to be_valid
       end
     end
